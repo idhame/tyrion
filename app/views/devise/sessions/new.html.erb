@@ -5,11 +5,14 @@
                     <div class="panel-heading">
                         <h3 class="panel-title">Please Sign In</h3>
                     </div>
-                    <center>
+
+                    <div class="panel-body">
+                    <% if flash[:notice] != nil || flash[:alert] != nil %>
+                    <div class="alert alert-danger" >
                     <%= flash[:notice] %>
                     <%= flash[:alert] %>
-                    </center>
-                    <div class="panel-body">
+                    </div>
+                    <% end %>
                         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />

@@ -2,15 +2,26 @@ Rails.application.routes.draw do
  
 
   
+  get 'incident_reports/show'
+
+  get 'incident_reports/index'
+
+  get 'incident_reports/new'
+
+  get 'incident_reports/edit'
+
   get 'users/show'
 
   get 'users/index'
-
+  get 'register' => 'users#new'
+  post 'users' => 'users#create'
+  get 'users/edit/:id' => 'users#edit', :as => 'edit'
   devise_for :users
   resources :pages
   resources :users
   root to: 'pages#index'
-  get 'register' => 'pages#new'
+  put 'lock_user/:id' => 'users#lock_user', :as => 'lock_user'
+  put 'unlock_user/:id' => 'users#unlock_user', :as => 'unlock_user'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -11,7 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150619155500) do
+ActiveRecord::Schema.define(version: 20150622081131) do
+
+  create_table "incident_reports", force: :cascade do |t|
+    t.string   "service_impact"
+    t.text     "problem_details"
+    t.string   "how_detected"
+    t.datetime "occurrence_time"
+    t.datetime "detection_time"
+    t.datetime "recovery_time"
+    t.string   "source"
+    t.integer  "rank"
+    t.string   "loss_related"
+    t.text     "occurred_reason"
+    t.text     "overlooked_reason"
+    t.text     "recovery_action"
+    t.text     "prevent_action"
+    t.string   "recurrence_concern"
+    t.string   "current_status"
+    t.string   "measurer_status"
+    t.integer  "user_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
+  add_index "incident_reports", ["user_id"], name: "index_incident_reports_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
