@@ -2,6 +2,7 @@ Rails.application.routes.draw do
  
 
   
+  resources :incident_reports
   get 'incident_reports/show'
 
   get 'incident_reports/index'
@@ -19,6 +20,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :pages
   resources :users
+  resources :incident_reports
   root to: 'pages#index'
   put 'lock_user/:id' => 'users#lock_user', :as => 'lock_user'
   put 'unlock_user/:id' => 'users#unlock_user', :as => 'unlock_user'

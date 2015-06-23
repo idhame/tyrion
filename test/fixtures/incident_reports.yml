@@ -4,9 +4,9 @@ one:
   service_impact: MyString
   problem_details: MyText
   how_detected: MyString
-  occurrence_time: 2015-06-22 15:11:31
-  detection_time: 2015-06-22 15:11:31
-  recovery_time: 2015-06-22 15:11:31
+  occurrence_time: 2015-06-22 15:37:41
+  detection_time: 2015-06-22 15:37:41
+  recovery_time: 2015-06-22 15:37:41
   source: MyString
   rank: 1
   loss_related: MyString
@@ -23,9 +23,9 @@ two:
   service_impact: MyString
   problem_details: MyText
   how_detected: MyString
-  occurrence_time: 2015-06-22 15:11:31
-  detection_time: 2015-06-22 15:11:31
-  recovery_time: 2015-06-22 15:11:31
+  occurrence_time: 2015-06-22 15:37:41
+  detection_time: 2015-06-22 15:37:41
+  recovery_time: 2015-06-22 15:37:41
   source: MyString
   rank: 1
   loss_related: MyString

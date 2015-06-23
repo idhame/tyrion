@@ -7,6 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= yield %>
+	<div id="wrapper">
+        <!-- Navigation -->
+        <% if current_user!=nil%>
+        <%= render 'pages/nav' %>
+        <% end %>
+		<%= yield %>
+	</div>
 </body>
 </html>
